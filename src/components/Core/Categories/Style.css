@@ -1,0 +1,54 @@
+/* General container styling */
+.container {
+  padding: 20px;
+}
+
+/* Grid for products */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Product card styling */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+/* Fixed size for images to make them consistent */
+.product-card img {
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 5px;
+  margin: 0 auto; /* Center image horizontally */
+}
+
+/* Button styling for consistency in size */
+button {
+  display: inline-block;
+  width: 120px; /* Fixed width for cart buttons */
+  padding: 10px; /* Adjust padding for button height */
+  font-size: 14px; /* Ensure consistent font size */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* Ensuring cart buttons are aligned properly */
+.product-card button {
+  margin-top: 15px;
+}

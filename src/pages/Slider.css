@@ -1,0 +1,55 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .slider {
+    width: 800px; 
+    height: 900px; 
+    position: relative;
+    transform-style: preserve-3d;
+    animation: autoRun 11s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes autoRun {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg); /* Halfway rotation, trigger image change */
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(0deg);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Optional: Add a border radius to the image */
+}
+
+/* JavaScript (React) Logic to Handle Image Change */
